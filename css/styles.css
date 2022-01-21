@@ -37,7 +37,7 @@ a {
 /* Large */
 @media (min-width: 1200px) {
   .container {
-    width: 1570px;
+    width: 1170px;
   }
 }
 /*Eng Global Rules*/
@@ -113,66 +113,69 @@ header nav .col1 {
 /*end header*/
 /*start landing*/
 .landing {
-  z-index: 2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   position: relative;
-  overflow: hidden;
-  min-height: 140vh;
 }
-.main-landing::after {
+
+/* .main-landing::after {
   content: "";
-  width: 888px;
+  width: 1000px;
   height: 800px;
   background-image: url(../images/bg-intro-desktop.svg);
   position: absolute;
   top: -252px;
   right: -325px;
   z-index: -10;
-}
+} */
 .main-landing {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-}
-.main-landing .text {
-  margin-top: 70px;
+  flex-direction: column;
 }
 
 .main-landing .text h1 {
+  margin-top: 230px;
   font-weight: normal;
   color: rgb(61, 61, 61);
-  font-size: 40px;
+  font-size: 50px;
 }
 .main-landing .text p {
   color: #777;
   line-height: 1.8;
   margin: 20px 0;
 }
+.main-landing .img {
+}
 .main-landing .img img {
   max-width: 100%;
-  width: 650px;
+  width: 750px;
+  background-image: url(../images/bg-intro-desktop.svg);
+  background-size: cover;
   position: absolute;
-  right: -441px;
-  top: -71px;
+  top: 0;
+  right: 0;
 }
-
 @media (max-width: 992px) {
-  .main-landing .text {
-    order: 2;
-    margin-top: 40px;
-    text-align: center;
+  .main-landing .img img {
+    position: static;
+    width: 530px;
   }
   .main-landing .img {
     order: 1;
-    margin-top: 40px;
+    text-align: right;
   }
-  .main-landing .img img {
-    max-width: 100%;
-    width: 450px;
-    position: static;
-    right: -441px;
-    top: -71px;
+  .main-landing .text {
+    order: 2;
+    text-align: center;
+  }
+  .main-landing .text h1 {
+    margin-top: 30px;
   }
 }
-
+@media (max-width: 768px) {
+  .main-landing .text h1 {
+    font-size: 30px;
+  }
+}
 /*end landing*/
