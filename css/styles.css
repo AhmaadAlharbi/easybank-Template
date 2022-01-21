@@ -37,7 +37,7 @@ a {
 /* Large */
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1570px;
   }
 }
 /*Eng Global Rules*/
@@ -116,10 +116,11 @@ header nav .col1 {
   z-index: 2;
   position: relative;
   overflow: hidden;
+  min-height: 140vh;
 }
 .main-landing::after {
   content: "";
-  width: 1000px;
+  width: 888px;
   height: 800px;
   background-image: url(../images/bg-intro-desktop.svg);
   position: absolute;
@@ -129,20 +130,49 @@ header nav .col1 {
 }
 .main-landing {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-
   position: relative;
 }
 .main-landing .text {
-}
-.main-landing .img {
-  position: relative;
+  margin-top: 70px;
 }
 
+.main-landing .text h1 {
+  font-weight: normal;
+  color: rgb(61, 61, 61);
+  font-size: 40px;
+}
+.main-landing .text p {
+  color: #777;
+  line-height: 1.8;
+  margin: 20px 0;
+}
 .main-landing .img img {
   max-width: 100%;
-  width: 450px;
+  width: 650px;
+  position: absolute;
+  right: -441px;
+  top: -71px;
 }
+
+@media (max-width: 992px) {
+  .main-landing .text {
+    order: 2;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .main-landing .img {
+    order: 1;
+    margin-top: 40px;
+  }
+  .main-landing .img img {
+    max-width: 100%;
+    width: 450px;
+    position: static;
+    right: -441px;
+    top: -71px;
+  }
+}
+
 /*end landing*/
