@@ -1,0 +1,148 @@
+@import "https://fonts.google.com/specimen/Public+Sans";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --dark-blue: hsl(233, 26%, 24%);
+  --Lime-Green: hsl(136, 65%, 51%);
+  --Bright-Cyan: hsl(192, 70%, 51%);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Public Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/*Eng Global Rules*/
+/*start header*/
+header {
+  padding: 10px 0;
+  box-shadow: 0 2px 6px rgba(100, 95, 136, 0.15);
+  z-index: 10;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+header nav ul li {
+  padding: 20px;
+}
+header nav ul li a {
+  color: #777;
+}
+
+header nav .col1 {
+  margin-left: 30px;
+}
+.primary-btn {
+  background-image: linear-gradient(
+    to right,
+    var(--Lime-Green),
+    var(--Bright-Cyan)
+  );
+  padding: 10px 20px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  color: white;
+}
+#burger {
+  display: none;
+}
+.mobile-nav.hide {
+  display: none;
+}
+@media (max-width: 768px) {
+  header nav .col2,
+  header nav .col3 {
+    display: none;
+  }
+  #burger {
+    display: flex;
+    margin-right: 30px;
+  }
+  .mobile-nav {
+    margin-top: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile-nav ul li {
+    padding: 10px 0;
+  }
+  .mobile-nav ul li a {
+    color: var(--dark-blue);
+  }
+}
+/*end header*/
+/*start landing*/
+.landing {
+  z-index: 2;
+  position: relative;
+  overflow: hidden;
+}
+.main-landing::after {
+  content: "";
+  width: 1000px;
+  height: 800px;
+  background-image: url(../images/bg-intro-desktop.svg);
+  position: absolute;
+  top: -252px;
+  right: -325px;
+  z-index: -10;
+}
+.main-landing {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  position: relative;
+}
+.main-landing .text {
+}
+.main-landing .img {
+  position: relative;
+}
+
+.main-landing .img img {
+  max-width: 100%;
+  width: 450px;
+}
+/*end landing*/
