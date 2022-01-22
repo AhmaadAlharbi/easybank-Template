@@ -169,6 +169,9 @@ header nav .col1 {
   .main-landing .text h1 {
     font-size: 30px;
   }
+  .main-landing .text p {
+    font-size: 14px;
+  }
 }
 /*end landing*/
 /*start about*/
@@ -205,6 +208,11 @@ header nav .col1 {
   .main-about {
     padding: 10px;
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .main-about p {
+    font-size: 15px;
   }
 }
 
@@ -272,6 +280,15 @@ article p {
     padding: 20px;
   }
 }
+@media (max-width: 767px) {
+  .main-article .boxes article img {
+    width: 300px;
+  }
+  .main-article .boxes article p {
+    font-size: 15px;
+  }
+}
+
 /*end articles*/
 /*footer*/
 footer {
@@ -282,6 +299,7 @@ footer {
 footer .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  place-items: center;
 }
 @media (max-width: 992px) {
   footer .grid {
